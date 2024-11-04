@@ -1,20 +1,20 @@
 const btn = document.getElementById('button');
 
-document.getElementById('conatctform')
+document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
    btn.value = 'Sending...';
 
    const serviceID = 'default_service';
-   const templateID = 'template_yo8zywq';
+   const templateID = 'template_e533x8o';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('YOUR MASSEGE SENT SUCCESSFULLY !');
+      alert('Message Send successful !');
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
-    });
+    });
 });
